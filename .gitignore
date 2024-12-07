@@ -6,6 +6,8 @@
 # not add to version control.
 
 # Quartus
+vga/db/
+vga/incremental_db/
 *.bak
 
 # Executables and debug files
