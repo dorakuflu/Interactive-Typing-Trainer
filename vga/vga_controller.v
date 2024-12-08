@@ -24,10 +24,20 @@ module vga_controller (
 	
 	// IO signals
 	wire reset;
+	reg reset_prev;
+	reg reset_ff;
+	
 	wire correct;
 	integer correct_index_x;
 	integer correct_index_y;
 	// end IO signals
+	
+	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+	
+	always @(posedge CLOCK_50) begin
+		reset_prev <= reset_ff;
+		reset_ff <= GPIO[1];
+	end
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// clk divider 50 MHz to 25 MHz
@@ -88,7 +98,7 @@ module vga_controller (
 	// end pattern generate
 	
 	// correct letter counter instantiation
-	correct_counter count(.clk(CLOCK_50), .reset(reset), .signal(~KEY[1]), .correct(correct));
+	correct_counter count(.clk(CLOCK_50), .reset(reset), .signal(GPIO[0]), .correct(correct));
 	// end correct letter counter instantiation
 
 	/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,8 +113,9 @@ module vga_controller (
 	assign VGA_BLANK_N = 1;
 	assign VGA_SYNC_N = 1;
 	// end VGA signal assignments
+	
 	// IO assignments
-	assign reset = ~KEY[0];
+	assign reset = reset_ff && ~reset_prev;
 	// end IO assignments
 	
 	

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for vga
-Sat Dec  7 15:54:18 2024
+Sun Dec  8 13:08:40 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -46,15 +46,15 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Dec  7 15:54:18 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sun Dec  8 13:08:40 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; vga                                            ;
 ; Top-level Entity Name              ; vga_controller                                 ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 734                                            ;
-;     Total combinational functions  ; 730                                            ;
-;     Dedicated logic registers      ; 98                                             ;
-; Total registers                    ; 98                                             ;
+; Total logic elements               ; 739                                            ;
+;     Total combinational functions  ; 733                                            ;
+;     Dedicated logic registers      ; 100                                            ;
+; Total registers                    ; 100                                            ;
 ; Total pins                         ; 34                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
@@ -185,20 +185,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------------------------------------+
 ; Resource                                    ; Usage                                   ;
 +---------------------------------------------+-----------------------------------------+
-; Estimated Total logic elements              ; 734                                     ;
+; Estimated Total logic elements              ; 739                                     ;
 ;                                             ;                                         ;
-; Total combinational functions               ; 730                                     ;
+; Total combinational functions               ; 733                                     ;
 ; Logic element usage by number of LUT inputs ;                                         ;
-;     -- 4 input functions                    ; 485                                     ;
-;     -- 3 input functions                    ; 111                                     ;
+;     -- 4 input functions                    ; 487                                     ;
+;     -- 3 input functions                    ; 112                                     ;
 ;     -- <=2 input functions                  ; 134                                     ;
 ;                                             ;                                         ;
 ; Logic elements by mode                      ;                                         ;
-;     -- normal mode                          ; 605                                     ;
+;     -- normal mode                          ; 608                                     ;
 ;     -- arithmetic mode                      ; 125                                     ;
 ;                                             ;                                         ;
-; Total registers                             ; 98                                      ;
-;     -- Dedicated logic registers            ; 98                                      ;
+; Total registers                             ; 100                                     ;
+;     -- Dedicated logic registers            ; 100                                     ;
 ;     -- I/O registers                        ; 0                                       ;
 ;                                             ;                                         ;
 ; I/O pins                                    ; 34                                      ;
@@ -207,7 +207,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                                         ;
 ; Maximum fan-out node                        ; ascii_gen:at|ascii_rom:rom0|addr_reg[4] ;
 ; Maximum fan-out                             ; 81                                      ;
-; Total fan-out                               ; 2946                                    ;
+; Total fan-out                               ; 2961                                    ;
 ; Average fan-out                             ; 3.29                                    ;
 +---------------------------------------------+-----------------------------------------+
 
@@ -217,10 +217,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name     ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
-; |vga_controller            ; 730 (131)           ; 98 (85)                   ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |vga_controller                              ; vga_controller  ; work         ;
-;    |ascii_gen:at|          ; 597 (429)           ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|ascii_gen:at                 ; ascii_gen       ; work         ;
+; |vga_controller            ; 733 (132)           ; 100 (87)                  ; 0           ; 0            ; 0       ; 0         ; 34   ; 0            ; |vga_controller                              ; vga_controller  ; work         ;
+;    |ascii_gen:at|          ; 599 (429)           ; 11 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|ascii_gen:at                 ; ascii_gen       ; work         ;
 ;       |ascii_rom:rom0|     ; 0 (0)               ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|ascii_gen:at|ascii_rom:rom0  ; ascii_rom       ; work         ;
-;       |prompt_rom:rom1|    ; 168 (168)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|ascii_gen:at|prompt_rom:rom1 ; prompt_rom      ; work         ;
+;       |prompt_rom:rom1|    ; 170 (170)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|ascii_gen:at|prompt_rom:rom1 ; prompt_rom      ; work         ;
 ;    |correct_counter:count| ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |vga_controller|correct_counter:count        ; correct_counter ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -231,7 +231,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 98    ;
+; Total registers                              ; 100   ;
 ; Number of registers using Synchronous Clear  ; 84    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -282,23 +282,23 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 34                          ;
-; cycloneiii_ff         ; 98                          ;
+; cycloneiii_ff         ; 100                         ;
 ;     ENA SCLR          ; 74                          ;
 ;     SCLR              ; 10                          ;
-;     plain             ; 14                          ;
-; cycloneiii_lcell_comb ; 733                         ;
+;     plain             ; 16                          ;
+; cycloneiii_lcell_comb ; 736                         ;
 ;     arith             ; 125                         ;
 ;         2 data inputs ; 100                         ;
 ;         3 data inputs ; 25                          ;
-;     normal            ; 608                         ;
+;     normal            ; 611                         ;
 ;         0 data inputs ; 4                           ;
 ;         1 data inputs ; 6                           ;
 ;         2 data inputs ; 27                          ;
-;         3 data inputs ; 86                          ;
-;         4 data inputs ; 485                         ;
+;         3 data inputs ; 87                          ;
+;         4 data inputs ; 487                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 14.00                       ;
-; Average LUT depth     ; 9.34                        ;
+; Average LUT depth     ; 9.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -307,7 +307,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:04     ;
 +----------------+--------------+
 
 
@@ -317,7 +317,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Sat Dec  7 15:54:03 2024
+    Info: Processing started: Sun Dec  8 13:08:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off vga -c vga
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -332,11 +332,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file ascii_r
 Info (12021): Found 1 design units, including 1 entities, in source file correct_counter.sv
     Info (12023): Found entity 1: correct_counter File: C:/Users/kuflu/Desktop/vga/correct_counter.sv Line: 1
 Info (12127): Elaborating entity "vga_controller" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(53): truncated value with size 32 to match size of target (10) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 53
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(58): truncated value with size 32 to match size of target (10) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 58
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(78): truncated value with size 32 to match size of target (1) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 78
-Warning (10230): Verilog HDL assignment warning at vga_controller.v(79): truncated value with size 32 to match size of target (1) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 79
-Info (12128): Elaborating entity "ascii_gen" for hierarchy "ascii_gen:at" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 87
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(63): truncated value with size 32 to match size of target (10) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 63
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(68): truncated value with size 32 to match size of target (10) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 68
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(88): truncated value with size 32 to match size of target (1) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 88
+Warning (10230): Verilog HDL assignment warning at vga_controller.v(89): truncated value with size 32 to match size of target (1) File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 89
+Info (12128): Elaborating entity "ascii_gen" for hierarchy "ascii_gen:at" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 97
 Warning (10230): Verilog HDL assignment warning at ascii_gen.sv(47): truncated value with size 32 to match size of target (12) File: C:/Users/kuflu/Desktop/vga/ascii_gen.sv Line: 47
 Warning (10230): Verilog HDL assignment warning at ascii_gen.sv(52): truncated value with size 32 to match size of target (12) File: C:/Users/kuflu/Desktop/vga/ascii_gen.sv Line: 52
 Warning (10230): Verilog HDL assignment warning at ascii_gen.sv(53): truncated value with size 32 to match size of target (2) File: C:/Users/kuflu/Desktop/vga/ascii_gen.sv Line: 53
@@ -355,7 +355,7 @@ Warning (10030): Net "main_prompt.we_a" at prompt_rom.sv(9) has no driver or ini
 Warning (10030): Net "title.we_a" at prompt_rom.sv(10) has no driver or initial value, using a default initial value '0' File: C:/Users/kuflu/Desktop/vga/prompt_rom.sv Line: 10
 Warning (10030): Net "initial_prompt.we_a" at prompt_rom.sv(11) has no driver or initial value, using a default initial value '0' File: C:/Users/kuflu/Desktop/vga/prompt_rom.sv Line: 11
 Warning (10030): Net "final_prompt.we_a" at prompt_rom.sv(12) has no driver or initial value, using a default initial value '0' File: C:/Users/kuflu/Desktop/vga/prompt_rom.sv Line: 12
-Info (12128): Elaborating entity "correct_counter" for hierarchy "correct_counter:count" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 91
+Info (12128): Elaborating entity "correct_counter" for hierarchy "correct_counter:count" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 101
 Info (276014): Found 4 instances of uninferred RAM logic
     Info (276007): RAM logic "ascii_gen:at|prompt_rom:rom1|main_prompt" is uninferred due to asynchronous read logic File: C:/Users/kuflu/Desktop/vga/prompt_rom.sv Line: 9
     Info (276004): RAM logic "ascii_gen:at|prompt_rom:rom1|title" is uninferred due to inappropriate RAM size File: C:/Users/kuflu/Desktop/vga/prompt_rom.sv Line: 10
@@ -372,16 +372,16 @@ Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "GPIO[0]" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 9
-    Warning (15610): No output dependent on input pin "GPIO[1]" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 9
-Info (21057): Implemented 768 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "KEY[0]" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 8
+    Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/kuflu/Desktop/vga/vga_controller.v Line: 8
+Info (21057): Implemented 773 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 734 logic cells
+    Info (21061): Implemented 739 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Sat Dec  7 15:54:18 2024
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4798 megabytes
+    Info: Processing ended: Sun Dec  8 13:08:40 2024
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 
