@@ -8,6 +8,7 @@
 # Quartus
 vga/db/
 vga/incremental_db/
+vga/output_files
 *.bak
 
 # Executables and debug files
